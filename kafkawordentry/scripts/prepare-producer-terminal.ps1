@@ -1,0 +1,1 @@
+start powershell {docker exec -it kafka sh -c 'kafka-console-producer --topic sentences --bootstrap-server localhost:9092" ; exec /bin/sh'}

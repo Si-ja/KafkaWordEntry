@@ -1,0 +1,1 @@
+start powershell {docker exec -it kafka sh -c 'kafka-console-consumer --topic word-count --bootstrap-server kafka:9092 --from-beginning --property print.key=true --property key.separator=" : " --key-deserializer "org.apache.kafka.common.serialization.StringDeserializer" --value-deserializer "org.apache.kafka.common.serialization.LongDeserializer"" ; exec /bin/sh'}
