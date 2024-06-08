@@ -13,7 +13,7 @@ public class PropertiesGenerator {
 		{
 			Properties props = new Properties();
 			props.put(StreamsConfig.APPLICATION_ID_CONFIG, applicationIdConfig);                       // GroupId of our application:
-			props.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:29092");                      // Location of the Kafka Server
+			props.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, "kafka:9092");                           // Location of the Kafka Server (this will only work on docker)
 			props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");                            // Tells which entry to read first in the queue      
 			props.put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.String().getClass());       // How to serialize and deserialize message values in our topics (for keys)
 			props.put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, Serdes.String().getClass());     // How to serialize and deserialize message values in our topics (for values)                    
